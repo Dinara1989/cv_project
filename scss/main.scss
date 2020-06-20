@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;900&display=swap');
+@font-face {
+    font-family: 'Effra';
+    src: local('Effra Light'), local('Effra-Light'),
+        url('Effra-Light.woff2') format('woff2'),
+        url('Effra-Light.woff') format('woff'),
+        url('Effra-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+@import "vars";
+@import "mixins";
+
+*{
+    font-family: 'Montserrat', thin;
+    font-weight: 100;
+    color: #ffffff;
+    outline: none;
+}
+.page-title{
+    background-image: url("https://www.tomswallpapers.com/pic/201502/1920x1200/tomswallpapers.com-775.jpg");
+    width: 100%;
+    height: 1000px;
+    position: fixed;
+    padding: 5em;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+
+    .navbar {
+
+        .navbar-toggler{
+            margin-top: 10px;
+            border-color: $font_col;
+            color: $font_col;
+            position: relative;
+            left: -10%;
+            
+            
+
+            .navbar-toggler-icon{
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(86, 55, 193)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+            }
+        }
+        h5 {
+        @include logo;
+        }
+
+        ul {
+            letter-spacing: 0.3em;
+
+            .nav-link {
+                color: rgb(1, 16, 20);
+
+                &:hover {
+                    color: $font_col;
+                }
+            }
+
+            .active {
+                color: $font_col;
+            }
+        }
+      
+    }
+
+    .rel_block{
+        position: relative;
+        height: 700px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+
+        p {
+            font-weight: 200;
+        }
+
+        .title{
+            padding-top: 15%;
+            padding-left: 10%;
+
+            h1 {
+                font-size: 6em;
+                &::first-letter {
+                    color: $font_col;
+                }
+                &::after{
+                    content: attr(data-end);
+                    color: $font_col;
+                }
+            }
+
+            h2{
+                font-size: 7em;
+                color: #ffffff;
+            }
+        }
+    }
+} 
+.bg-cover {
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-size: cover; 
+    -webkit-background-size: cover;
+}
+.bg-fixed {
+    background-attachment: fixed;
+}
+
+.cv-block {
+    background: $col_back;
+    position: absolute;
+    top: 105%;
+    left: 25%;
+    width: 700px;
+    height: 500px;
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+    z-index: 3;
+
+    .text {
+        margin-top: 50px;
+        text-align: center;
+
+        h5 {
+            @include logo;
+            
+        }
+    
+        p {
+            color: #ffff;
+            font-size: 14px;
+            margin-top: 60px;
+            line-height: 40px;
+            font-family: 'Effra';
+            letter-spacing: 0.2em;
+        }
+
+        button {
+            color:#ffffff;
+            letter-spacing: 0.5em;
+            border: solid 1px $font_col;
+
+            &:hover {
+                background-color: $font_col;
+            }
+        }
+    }
+}
+
+main{
+    background-image: url("https://avatars.mds.yandex.net/get-pdb/1366512/e3bebc3d-37a6-4a24-abfb-392e261654ee/s1200?webp=false");
+    width: 100%;
+    height: 1200px;
+    position: fixed;
+    padding: 5em;
+
+    .skils {
+        position: absolute;
+        width: 1000px;
+        height: 500px;
+        z-index: 3;
+        display: inline;
+        top: 30%;
+        left: 15%;
+
+        .text {
+            margin-top: 50px;
+            text-align: center;
+
+            h2 {
+                font-size: 5em;
+                span {
+                    color: rgb(86, 55, 193, 0.6);
+                    font-weight: 900;
+                }
+            }
+
+            p {
+                font-size: 30px;
+                margin-top: 50px;
+            }
+        }
+    }
+} 
+
+.experience {
+    background-image: url("https://i.pinimg.com/originals/cc/39/56/cc3956d2ee2d864a263acc2ab2d9618f.jpg");
+    width: 100%;
+    height: 2500px;
+    position: fixed;
+    padding: 5em;
+
+    .skils {
+        position: absolute;
+        width: 1000px;
+        height: 500px;
+        z-index: 3;
+        display: inline;
+        top: 10%;
+        left: 15%;
+
+        .text {
+            margin-top: 50px;
+            text-align: center;
+
+            h2 {
+                font-size: 5em;
+                margin-bottom: 100px;
+                span {
+                    color: rgb(86, 55, 193, 0.6);
+                    font-weight: 900;
+                }
+            }
+
+            p {
+                font-size: 30px;
+                margin-top: 50px;
+            }
+        }
+    }
+} 
+
+// Footer//
+
+footer {
+    background-color: rgba(54, 60, 75, 0.5);
+    height: 200px;
+    width: 100%;
+    position: relative;
+    margin-top: -12.5em;
+    padding: 50px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+      
+    .social  {
+
+        text-align: center;
+        
+        div {
+        width: 50px;
+        height: 50px;
+        
+        line-height: 50px;
+        border-radius: 50%;
+        background: $font_col;
+        border: 1px solid $font_col;
+        cursor: pointer;
+        transition: transform 600ms ease;
+        display: inline-block;
+        margin-left: 25px;
+
+        &:hover {
+            transform: translateY(-10px);
+        }
+      }
+    }
+}
+
+.squares {
+    position: absolute;
+    top: 292%;
+    left: 20%; 
+    // display: inline;
+    
+
+    .first {
+        @include square_block;
+    }
+    .second {
+        @include square_block;
+    }
+    .third {
+        @include square_block;
+    }
+    .move {
+        align-self: flex-end;
+        z-index: 1;
+
+        &:hover {
+            background-color: $font_col;
+            transform: scale(1.2) rotate(20deg);
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+            -webkit-transform: scale(1.2) rotate(45deg);
+            -moz-transform: scale(1.2) rotate(45deg);
+            -ms-transform: scale(1.2) rotate(45deg);
+            -o-transform: scale(1.2) rotate(45deg);
+        }
+    }
+}
+
+
+
+// Timeline// 
+
+#timeline *, 
+#timeline *:before, 
+#timeline *:after {
+    box-sizing: border-box;
+}    
+#timeline .timeline-item:after, 
+#timeline .timeline-item:before {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
+}
+#timeline {
+    max-width: 1100px;
+    width: 100%;
+    margin: 30px auto;
+    position: relative;
+    padding: 0 10px;
+    transition: all 0.4s ease;
+
+    .timeline-item {
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .timeline-content {
+
+        color: #fff;
+        
+        text-align: right;
+        .year {
+            color: $font_col;
+            font-size: 24px;
+        }
+        .h4 {
+            font-size: 60px;
+            font-weight: 300;
+        }
+        .text-block {
+            font-size: 14px;
+            text-transform: none;
+        }
+    }
+    .right {
+        text-align: left;
+    }
+}
+#timeline:before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    background: $font_col;
+    left: 50%;
+    top: 0;
+    position: absolute;
+}
+
+#timeline .timeline-item .timeline-icon {
+    background: $font_col;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    overflow: hidden;
+    margin-left: -24px;
+    border-radius: 50%;
+}
+#timeline .timeline-item .timeline-icon i {
+    line-height: 50px;
+}
+#timeline .timeline-item .timeline-content {
+    width: 45%;
+    transition: all 0.3s ease;
+}
+
+#timeline .timeline-item:nth-child(even) .timeline-content {
+    float: right;
+}
+
+
+
+
+
+
+// Progress bar//
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .prog {
+    display: inline-block;
+    position: relative;
+    margin-left: 5em;
+
+    h6 {
+        display: inline-block; 
+    }
+
+    p {
+        display: inline-block;
+    }
+
+    .progress-bar {
+        position: relative;
+        display: inline-block;
+    
+        width: $progress-bar-width;
+    
+        box-sizing: border-box;
+    
+        &:not(:last-child) {
+        margin-bottom: $progress-bar-offset-vert;
+        }       
+    }
+}
+}
+
+.progress-bar--lg-offset {
+  &:not(:last-child) {
+    margin-bottom: $progress-bar-offset-vert * 1.5;
+  }
+}
+
+.progress-bar__bar {
+  position: relative;
+
+  height: 80%;
+  width: 80%;
+
+  overflow: hidden;
+}
+
+.progress-bar__bar--no-overflow {
+  overflow: visible;
+}
+
+.progress-bar__bar-inner {
+  @include position-absolute($top: 0, $left: 0);
+
+  height: 100%;
+
+  transform: scaleX(0);
+  transform-origin: left center;
+
+  &.js-animated {
+    @include transition-mix(
+      $duration: 0.5s,
+      $timing: cubic-bezier(0.1, 1.14, 0.31, 1.06)
+    );
+
+    transform: scaleX(1);
+  }
+}
+
+.progress-bar {
+    background-color: transparent!important;
+}
+
+
+.progress-bar--2 {
+  height: $progress-2-height;
+
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+@keyframes progress-2-bg-animation {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+
+  100% {
+    background-position: 0 0, $progress-2-gradient-bg-size 0;
+  }
+}
+
+.progress-bar__bar-inner--2 {
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.15),
+      rgba(0, 0, 0, 0.2)
+    ),
+    linear-gradient(
+      135deg,
+      $progress-2-color-1,
+      $progress-2-color-1 33%,
+      $progress-2-color-2 33%,
+      $progress-2-color-2 66%,
+      $progress-2-color-1 66%
+    );
+  background-size: 100% 100%, $progress-2-gradient-bg-size 100%;
+  background-position: 0 0, 0 0;
+  border-radius: 3px;
+
+  &.js-animated {
+    animation: progress-2-bg-animation 1.5s linear 0s infinite;
+  }
+}
+
+.progress-bar__skill--2 {
+  @include position-absolute($top: $progress-2-label-top - 10, $left: 0);
+
+  opacity: 0;
+
+  &.js-animated {
+    @include transition-mix;
+
+    top: $progress-2-label-top;
+
+    opacity: 1;
+  }
+}
+
+.progress-bar__value--2 {
+  @include position-absolute($top: $progress-2-label-top - 10, $right: 0);
+
+  opacity: 0;
+
+  &.js-animated {
+    @include transition-mix;
+
+    top: $progress-2-label-top;
+
+    opacity: 1;
+  }
+}
+
+// @media screen and (max-width: 768px) {
+//     #timeline {
+//         margin: 30px;
+//         padding: 0px;
+//         width: 90%;
+//     }
+//     #timeline:before {
+//         left: 0;
+//     }
+//     #timeline .timeline-item .timeline-content {
+//         width: 90%;
+//         float: right;
+//     }
+// }
+
+@media (max-width: 1200px) and (min-width: 768px) {
+    main {
+        height: 700px;
+    }
+    main .skils {
+        width: 90%!important;
+        position: absolute;
+        top: 10%;
+        left: 5%;
+    }
+    main .skils h2 {
+        font-size: 3em!important;
+        top: 10%!important;
+    }
+    .squares .move{
+        display: none!important;
+    }
+    .cv-block {
+        width: 60%;
+        left: 21%;
+        top: 100%;
+    }
+
+    section .skils {
+        width: 80%!important;
+        position: absolute;
+    }
+    section .skils h2 {
+        font-size: 3em!important;
+        position: absolute;
+        top: -10%;
+        left: 15%;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 575px) {
+    .cv-block {
+        top: 120%;
+    }
+    main {
+        height: 1100px;
+    }
+    main .skils {
+        width: 100%!important;
+        padding: 10px 35px;
+        position: absolute;
+        top: 30%;
+        left: 0;
+    }
+}
+
+@media (max-width: 425px) and (min-width: 321px)  {
+
+    main {
+        height: 900px;
+        margin: 0 auto;
+    }
+    
+    main .title h1::after{
+       display: none;
+    }
+    main .title h1 {
+        width: 70%;
+        position: absolute;
+        font-size: 2em!important;
+        text-align: center!important;
+        top: -35%;
+        left: 15%;
+    }
+    main .title {
+        padding: 0;
+    }
+    main .title p {
+        margin-top: 10%;
+        text-align: center;
+    }
+    main .skils {
+        width: 90%!important;
+        position: absolute;
+        top: 10%;
+        left: 5%;
+    }
+    main .skils .text p {
+        font-size: 1em;
+    }
+    main .skils .progress-container .prog {
+        left: -25%;
+        width: 100%;
+    }
+    main .skils h2 {
+        font-size: 3em!important;
+    }
+    main .skils .progress-container .prog span{
+        width: 80%;
+        
+    }
+    .squares .move{
+        display: none!important;
+    }
+    .cv-block {
+        width: 80%;
+        left: 10%;
+        top: 100%;
+    }
+    .cv-block .text p{
+        padding: 0;
+        line-height: 20px;
+    }
+    section .skils {
+        width: 80%!important;
+        position: absolute;
+    }
+    section .skils h2 {
+        font-size: 3em!important;
+        position: absolute;
+        top: -7%;
+        left: 5%;
+    }
+    #timeline .timeline-item .timeline-icon {
+        display: none;
+    }
+    #timeline::before {
+        display: none;
+    }
+    #timeline .experience .skils {
+        width: 100%;
+    }
+    #timeline .timeline-item .timeline-content{
+        width: 100%;
+        margin-top: 0!important;
+    }
+    .experience .skils .text {
+        text-align: left;
+    }
+}
